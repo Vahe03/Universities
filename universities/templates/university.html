@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block 'title' %}Welcome to University page.  {% endblock %}}
+
+{% block 'content' %}
+<table style="border: 1px solid black">
+    <tr>
+        <th scope="col" style="border: 1px solid black">Name</th>
+        <th scope="col" style="border: 1px solid black">Rank</th>
+        <th scope="col" style="border: 1px solid black">Score</th>
+        <th scope="col" style="border: 1px solid black">Country</th>
+    </tr>
+
+    <tr>
+        <td style="border: 1px solid black; background-color: #d9d9d9">{{ university.name }}</td>
+        <td style="border: 1px solid black">{{ university.rank }}</td>
+        <td style="border: 1px solid black; background-color: #d9d9d9">{{ university.score }}</td>
+        <td style="border: 1px solid black">{{ university.country.name }}</td>
+    </tr>
+</table>
+<hr>
+<a href="{% url 'universities' %}">Go back</a>
+{% endblock %}
